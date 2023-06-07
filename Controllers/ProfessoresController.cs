@@ -124,6 +124,7 @@ namespace projeto.Controllers
             }
 
             var professor = await _context.Professores
+                .Include(p => p.Cursos)
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (professor == null)
             {

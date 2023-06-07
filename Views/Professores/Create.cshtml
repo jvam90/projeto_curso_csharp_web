@@ -82,7 +82,7 @@
     async function teste() {
         const cep = document.getElementById("cep").value;
         if(cep){
-            const response = await fetch(`https://localhost:7001/CEP/${cep}`);
+            const response = await fetch(`https://localhost:7094/CEP/${cep}`);
             const jsonData = await response.json();
             let existe = !Object.values(jsonData).every(o => o === null);
             if(existe){

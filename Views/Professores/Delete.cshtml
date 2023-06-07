@@ -63,6 +63,24 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Pais)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cursos)
+        </dt>
+        <dd class="col-sm-10">
+            <table class="table">
+                <tr>
+                    <th>Nome Do Curso</th>
+                </tr>
+                @foreach (var item in Model.Cursos)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
     </dl>
     
     <form asp-action="Delete">

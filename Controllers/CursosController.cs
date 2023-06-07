@@ -78,7 +78,7 @@ namespace projeto.Controllers
             {
                 return NotFound();
             }
-            ViewData["ProfessorID"] = new SelectList(_context.Professores, "ID", "Bairro", curso.ProfessorID);
+            ViewData["ProfessorID"] = new SelectList(_context.Professores, "ID", "Nome", curso.ProfessorID);
             return View(curso);
         }
 
